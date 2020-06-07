@@ -7,6 +7,14 @@
 ## Commits History
 
 ************************************************************************************************
+### Added class Constructor, and added 'export' keyword to the class
+================================================================================================
+***User.ts***
+1. Added class 'constructor' that initializes class fields using 'faker' i.e. 'name' and 'location'
+2. Added 'export' keyword in front of the class so that other files in the project can 'import' it.
+
+
+************************************************************************************************
 ### Added User class, insatlled 'faker' and corresponding '@types/faker' package
 ================================================================================================
 ***User.ts***
