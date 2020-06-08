@@ -7,6 +7,19 @@
 ## Commits History
 
 ************************************************************************************************
+### Added 'Company' class, its Constructor, and added 'export' keyword to the class
+================================================================================================
+***Company.ts***
+1. Added 'Company' class to provide a Company info i.e. 'companyName', 'catchPhrase' and 'location'
+1. Added class 'constructor' that initializes class fields using 'faker'.
+2. Added 'export' keyword in front of the class so that other files in the project can 'import' it.
+
+***index.ts***
+1. Imported 'Company' class from './Company' file
+2. Created an Object of 'Company' class and printed in on the console window
+
+
+************************************************************************************************
 ### Imported 'User' class from './User' file and created an Object of it
 ================================================================================================
 ***index.ts***

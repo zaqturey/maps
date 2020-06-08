@@ -1,21 +1,22 @@
 import faker from 'faker';
 
 // =========================================================================================
-// Class Usage - To generate random 'name' and random 'location'
+// Class Usage - To generate random 'companyName', a 'catchPhrase' and a random 'location'
 // =========================================================================================
-export class User {
-  name: string;
+export class Company {
+  companyName: string;
+  catchPhrase: string;
   location: {
     lat: number;
     lng: number;
   };
 
-  // Added 'constructor' that initializes class fields using 'faker'
   constructor() {
-    this.name = faker.name.firstName();
+    this.companyName = faker.company.companyName();
+    this.catchPhrase = faker.company.catchPhrase();
     this.location = {
       lat: parseFloat(faker.address.latitude()),
       lng: parseFloat(faker.address.longitude())
-    };    
+    };
   }
 }
