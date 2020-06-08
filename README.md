@@ -7,6 +7,15 @@
 ## Commits History
 
 ************************************************************************************************
+### Imported 'User' class from './User' file and created an Object of it
+================================================================================================
+***index.ts***
+1. Imported 'User' class from './User' file
+2. Created an Object of 'User' class and printed in on the console window
+3. Note: you can import multiple classes, fields inside the curly braces from the same file.
+
+
+************************************************************************************************
 ### Added class Constructor, and added 'export' keyword to the class
 ================================================================================================
 ***User.ts***
