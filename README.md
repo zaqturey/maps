@@ -7,6 +7,14 @@
 ## Commits History
 
 **********************************************************************************************************
+### addListener: added a new method to on Marker to display an 'InfoWindow' 
+==========================================================================================================
+***CustomMaps.ts***
+1. addListener -> Added a 'click' lister to the 'marker' object
+2. addListener -> on click event, it creates an object of 'google.maps.InfoWindow' and 'open' it on given map
+
+
+**********************************************************************************************************
 ### installed '@types/googlemaps' NPM module, added 'CustomMap' class (refactored 'index.ts' to use it)
 ==========================================================================================================
 ***Index.html***
