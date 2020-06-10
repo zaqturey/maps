@@ -1,14 +1,13 @@
 import { User } from './User';
 import { Company } from './Company';
+import { CustomMap } from './CustomMap';
 
-// =========================================================================================
-// Creating an Object of 'User' class and logging it in the console window
-// =========================================================================================
-const user = new User();
-console.log(user);
-
-// =========================================================================================
-// Creating an Object of 'Company' class and logging it in the console window
-// =========================================================================================
+// Creating Objects of 'User', 'Company' and 'CustomMap', passing in the the 'divId' as argument
+const user =  new User();
 const company = new Company();
-console.log(company);
+const customMap = new CustomMap('map');
+
+// Note: as 'User' and 'Company' satisfies the type 'Mappable' ('interface' in 'CustomMap.ts')
+// these can be passed as argument to 'addMarker'
+customMap.addMarker(user);
+customMap.addMarker(company);
