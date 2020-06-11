@@ -6,6 +6,26 @@
 
 ## Commits History
 
+// Updated 'Mappable', and now 'User' and 'Company' classes implement 'Mappable'
+//==============================================================================
+***Notess***
+# To be an Object of 'Mappable' (or any Interface), a class must define all fields/methods
+# implemets -> Using 'implemets' enforce a class to meet the Object requirements.
+
+***CustomMaps.ts***
+1. Mappable -> Updated the interface to accept a new argument i.e. 'markerContent()'
+1. Mappable -> added 'export' to it so other classes can 'implemet' it.
+2. infoWindow -> updated 'content' to show value from 'mappable.markerContent()'
+
+***User.ts***
+1. User class now 'implements' the 'Mappable'interface
+2. markerContent() -> added this new method that returns 'UserName' as String 
+
+***Company.ts***
+1. Company class now 'implements' the 'Mappable'interface
+2. markerContent() -> added this new method that returns an HTML element as a String 
+
+
 **********************************************************************************************************
 ### addListener: added a new method to on Marker to display an 'InfoWindow' 
 ==========================================================================================================

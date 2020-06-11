@@ -5,12 +5,13 @@
 // =========================================================================================
 
 // interface defines Instructions to every other class on how they can be an argument to 'addMarker' i.e.
-// they must have a field called 'location' with 'lat' and 'lng' properties
-interface Mappable {
+// they must have a 'location' (with 'lat' and 'lng' properties) and a 'markerConetnt' field/method
+export interface Mappable {
   location: {
     lat: number;
     lng: number;
   };
+  markerContent(): string;
 }
 
 export class CustomMap {
@@ -28,7 +29,8 @@ export class CustomMap {
   }
 
   // ===========================================================================
-  // Function to add a Marker on Google Map
+  // addMarker -> it adds a Marker on Google Map
+  // addMarker -> it also has a listener of 'click' evenet that displays an 'InfoWindow'
   // Note: In order to be an argument to 'addMarker' function, 
   // it must safisfy the 'Mappable' interface
   // ===========================================================================
@@ -42,7 +44,6 @@ export class CustomMap {
       }
     });
 
-    // 
     // =========================================================================
     // addLister -> Calling 'addLister' on 'marker' to display an 'InfoWindow'
     // addLister requires two arguments i.e. 'eventName' and 'handler'
@@ -50,7 +51,7 @@ export class CustomMap {
     marker.addListener('click', () => {
       // Creating an object of 'infoWindow'
       const infoWindow = new google.maps.InfoWindow({
-        content: 'Hi Vibhakar!'
+        content: mappable.markerContent(),
       });
 
       // =======================================================================
